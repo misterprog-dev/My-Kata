@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 import static com.dsoumaila.coffeemachine.Drink.*;
 import static java.math.BigDecimal.ZERO;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertSame;
 
 class PadTest {
     @Test
