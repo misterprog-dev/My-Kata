@@ -6,11 +6,11 @@ import java.math.BigDecimal;
 
 import static com.dsoumaila.coffeemachine.Drink.*;
 import static java.math.BigDecimal.ZERO;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PadTest {
     @Test
-    public void should_get_the_rest_of_money_for_coffee() {
+    void should_get_the_rest_of_money_for_coffee() {
         // GIVEN
         Pad pad = new Pad(COFFEE, 2, new BigDecimal("0.2"));
 
@@ -18,11 +18,11 @@ class PadTest {
         BigDecimal result = pad.getTheRestOfMoney();
 
         // THEN
-        assertThat(result).isEqualTo(new BigDecimal("0.4"));
+        assertEquals(new BigDecimal("0.4"), result);
     }
 
     @Test
-    public void should_get_the_rest_of_money_for_tea() {
+    void should_get_the_rest_of_money_for_tea() {
         // GIVEN
         Pad pad = new Pad(TEA, 2, new BigDecimal("0.2"));
 
@@ -30,11 +30,11 @@ class PadTest {
         BigDecimal result = pad.getTheRestOfMoney();
 
         // THEN
-        assertThat(result).isEqualTo(new BigDecimal("0.2"));
+        assertEquals(new BigDecimal("0.2"), result);
     }
 
     @Test
-    public void should_get_the_rest_of_money_for_chocolate() {
+    void should_get_the_rest_of_money_for_chocolate() {
         // GIVEN
         Pad pad = new Pad(CHOCOLATE, 2, new BigDecimal("0.2"));
 
@@ -42,11 +42,11 @@ class PadTest {
         BigDecimal result = pad.getTheRestOfMoney();
 
         // THEN
-        assertThat(result).isEqualTo(new BigDecimal("0.3"));
+        assertEquals(new BigDecimal("0.3"), result);
     }
 
     @Test
-    public void should_get_the_rest_of_money_for_orange() {
+    void should_get_the_rest_of_money_for_orange() {
         // GIVEN
         Pad pad = new Pad(ORANGE, 2, new BigDecimal("0.2"));
 
@@ -54,11 +54,11 @@ class PadTest {
         BigDecimal result = pad.getTheRestOfMoney();
 
         // THEN
-        assertThat(result).isEqualTo(new BigDecimal("0.4"));
+        assertEquals(new BigDecimal("0.4"), result);
     }
 
     @Test
-    public void should_get_zero_for_the_rest_of_money() {
+    void should_get_zero_for_the_rest_of_money() {
         // GIVEN
         Pad pad = new Pad(TEA, 2, new BigDecimal("0.4"));
 
@@ -66,6 +66,6 @@ class PadTest {
         BigDecimal result = pad.getTheRestOfMoney();
 
         // THEN
-        assertThat(result).isEqualByComparingTo(ZERO);
+        assertEquals(ZERO, result);
     }
 }
