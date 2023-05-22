@@ -1,9 +1,9 @@
-package com.dsoumaila;
+package com.dsoumaila.fraction;
 
 public class Fraction {
     private final int numerator;
     private final int denominator;
-    public static final Fraction INFINITE = new Fraction(0, Integer.MAX_VALUE) {
+    public static final Fraction INFINITE = new Fraction(Integer.MAX_VALUE, 0) {
         @Override
         public Fraction add(Fraction fraction) {
             return this;

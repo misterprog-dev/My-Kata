@@ -1,4 +1,4 @@
-package com.dsoumaila;
+package com.dsoumaila.fraction;
 
 public class PGCD {
     public static Integer pgcd(int firstNumber, int secondNumber) {

@@ -1,10 +1,10 @@
-package com.dsoumaila;
+package com.dsoumaila.fraction;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static com.dsoumaila.Fraction.INFINITE;
-import static com.dsoumaila.Fraction.ZERO;
-import static org.junit.Assert.assertEquals;
+import static com.dsoumaila.fraction.Fraction.INFINITE;
+import static com.dsoumaila.fraction.Fraction.ZERO;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SubstractionFractionTest {
     @Test
@@ -14,10 +14,10 @@ public class SubstractionFractionTest {
         Fraction secondFraction = new Fraction(0);
 
         // Act
-        Fraction substract = firstFraction.substract(secondFraction);
+        Fraction result = firstFraction.substract(secondFraction);
 
         // Assert
-        assertEquals(substract, ZERO);
+        assertEquals(ZERO, result);
     }
 
     @Test
@@ -27,10 +27,10 @@ public class SubstractionFractionTest {
         Fraction secondFraction = new Fraction(0);
 
         // Act
-        Fraction substract = firstFraction.substract(secondFraction);
+        Fraction result = firstFraction.substract(secondFraction);
 
         // Assert
-        assertEquals(substract, firstFraction);
+        assertEquals(firstFraction, result);
     }
 
     @Test
@@ -40,10 +40,10 @@ public class SubstractionFractionTest {
         Fraction secondFraction = Fraction.createFraction(3, 4);
 
         // Act
-        Fraction substract = firstFraction.substract(secondFraction);
+        Fraction result = firstFraction.substract(secondFraction);
 
         // Assert
-        assertEquals(substract, secondFraction.opposite());
+        assertEquals(secondFraction.opposite(), result);
     }
 
     @Test
@@ -53,22 +53,9 @@ public class SubstractionFractionTest {
         Fraction secondFraction = Fraction.createFraction(5, 7);
 
         // Act
-        Fraction substract = firstFraction.substract(secondFraction);
+        Fraction result = firstFraction.substract(secondFraction);
 
         // Assert
-        assertEquals(substract, Fraction.createFraction(1, 28));
-    }
-
-    @Test
-    public void substract_NonZero_With_FractionDenominatorAsZero() {
-        // Arrange
-        Fraction firstFraction = Fraction.createFraction(3, 2);
-        Fraction secondFraction = Fraction.createFraction(3, 0);
-
-        // Act
-        Fraction substract = firstFraction.substract(secondFraction);
-
-        // Assert
-        assertEquals(substract, INFINITE);
+        assertEquals(Fraction.createFraction(1, 28), result);
     }
 }

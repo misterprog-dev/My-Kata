@@ -1,9 +1,9 @@
-package com.dsoumaila;
+package com.dsoumaila.fraction;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static com.dsoumaila.Fraction.INFINITE;
-import static org.junit.Assert.assertEquals;
+import static com.dsoumaila.fraction.Fraction.INFINITE;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AdditionFractionTest {
     @Test

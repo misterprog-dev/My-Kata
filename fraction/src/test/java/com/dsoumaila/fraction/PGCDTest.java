@@ -1,8 +1,9 @@
-package com.dsoumaila;
+package com.dsoumaila.fraction;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class PGCDTest {
     @Test
@@ -11,7 +12,7 @@ public class PGCDTest {
         Integer pgcd = PGCD.pgcd(0, 0);
 
         // Assert
-        assertEquals(pgcd, null);
+        assertNull(pgcd);
     }
 
     @Test
@@ -20,7 +21,7 @@ public class PGCDTest {
         Integer pgcd = PGCD.pgcd(0, 2);
 
         // Assert
-        assertEquals(pgcd, (Integer)2);
+        assertEquals((Integer)2, pgcd);
     }
 
     @Test
@@ -29,7 +30,7 @@ public class PGCDTest {
         Integer pgcd = PGCD.pgcd(2, 0);
 
         // Assert
-        assertEquals(pgcd, (Integer)2);
+        assertEquals((Integer)2, pgcd);
     }
 
     @Test
@@ -38,6 +39,6 @@ public class PGCDTest {
         Integer pgcd = PGCD.pgcd(7, 5);
 
         // Assert
-        assertEquals(pgcd, (Integer)1);
+        assertEquals((Integer)1, pgcd);
     }
 }
