@@ -1,0 +1,103 @@
+name: My Kata
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  bank-account:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build bank account
+        working-directory: bank-account
+        run: mvn --batch-mode --update-snapshots package
+      
+
+  black-jack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build black jack
+        working-directory: black-jack
+        run: mvn --batch-mode --update-snapshots package
+
+
+  coffee-machine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build coffee machine
+        working-directory: coffee-machine
+        run: mvn --batch-mode --update-snapshots package
+
+  fizz-buzz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build fizz buzz
+        working-directory: fizz-buzz
+        run: mvn --batch-mode --update-snapshots package
+
+  fraction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build fraction
+        working-directory: fraction
+        run: mvn --batch-mode --update-snapshots package
+
+  mars-rover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: mars rover
+        working-directory: mars-rover
+        run: mvn --batch-mode --update-snapshots package
+
+  tondeuse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: tondeuse
+        working-directory: tondeuse
+        run: mvn --batch-mode --update-snapshots package
