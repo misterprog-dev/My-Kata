@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 import static com.dsoumaila.coffeemachine.Drink.ORANGE;
 import static com.dsoumaila.coffeemachine.Drink.TEA;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DrinkMachineTest {
 

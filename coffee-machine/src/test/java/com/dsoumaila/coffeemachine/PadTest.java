@@ -66,6 +66,6 @@ class PadTest {
         BigDecimal result = pad.getTheRestOfMoney();
 
         // THEN
-        assertEquals(ZERO, result);
+        assertEquals(new BigDecimal("0.0"), result);
     }
 }
