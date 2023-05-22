@@ -19,7 +19,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build bank account
-        working-directory: bank-account
+        working-directory: hexa-archi/bank-account
         run: mvn --batch-mode --update-snapshots package
       
 
@@ -33,7 +33,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build black jack
-        working-directory: black-jack
+        working-directory: TDD/black-jack
         run: mvn --batch-mode --update-snapshots package
 
 
@@ -47,7 +47,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build coffee machine
-        working-directory: coffee-machine
+        working-directory: TDD/coffee-machine
         run: mvn --batch-mode --update-snapshots package
 
   fizz-buzz:
@@ -60,7 +60,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build fizz buzz
-        working-directory: fizz-buzz
+        working-directory: TDD/fizz-buzz
         run: mvn --batch-mode --update-snapshots package
 
   fraction:
@@ -73,7 +73,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build fraction
-        working-directory: fraction
+        working-directory: TDD/fraction
         run: mvn --batch-mode --update-snapshots package
 
   mars-rover:
@@ -86,7 +86,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: mars rover
-        working-directory: mars-rover
+        working-directory: TDD/mars-rover
         run: mvn --batch-mode --update-snapshots package
 
   tondeuse:
@@ -99,5 +99,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: tondeuse
-        working-directory: tondeuse
+        working-directory: TDD/tondeuse
         run: mvn --batch-mode --update-snapshots package
