@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  bank-account:
+  hexa-archi_bank-account:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,7 +23,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots package
       
 
-  black-jack:
+  TDD_black-jack:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots package
 
 
-  coffee-machine:
+  TDD_coffee-machine:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -50,7 +50,7 @@ jobs:
         working-directory: TDD/coffee-machine
         run: mvn --batch-mode --update-snapshots package
 
-  fizz-buzz:
+  TDD_fizz-buzz:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -63,7 +63,7 @@ jobs:
         working-directory: TDD/fizz-buzz
         run: mvn --batch-mode --update-snapshots package
 
-  fraction:
+  TDD_fraction:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -76,7 +76,7 @@ jobs:
         working-directory: TDD/fraction
         run: mvn --batch-mode --update-snapshots package
 
-  mars-rover:
+  TDD_mars-rover:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -89,7 +89,7 @@ jobs:
         working-directory: TDD/mars-rover
         run: mvn --batch-mode --update-snapshots package
 
-  tondeuse:
+  TDD_tondeuse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
