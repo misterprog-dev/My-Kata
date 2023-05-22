@@ -1,5 +1,5 @@
 ### SerialDate Refactoring
-Refactoring on SerialDate module 
+Refactoring of serialDate with Uncle Bob in Clean Code Book, step by step
 
 ### What's SerialDate in Java
 SerialDate is the Java Class Date. About the Author:
